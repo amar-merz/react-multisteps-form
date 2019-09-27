@@ -40,14 +40,15 @@ handleChange=(input)=>e=>{
     render() {
         const {step} = this.state;
         const {firstName,lastName,email,bio,occupation,city} = this.state;
-        const userinfos = {firstName,lastName,email,bio,occupation,city};
+        const userInfos = {firstName,lastName,email,bio,occupation,city};
+        
         switch (step) {
             case 1:
                 return(
                     <React.Fragment>
                         <UserDetailsForm nextStep={this.nextStep}
                             handleChange={this.handleChange}
-                            userInfos={userinfos}/>
+                            userInfos={userInfos}/>
                     </React.Fragment>
                 )
                 
@@ -58,7 +59,7 @@ handleChange=(input)=>e=>{
                                 <PersonalDetailsForm nextStep={this.nextStep}
                                     prevStep={this.prevStep}
                                     handleChange={this.handleChange}
-                                    userInfos={userinfos}/>
+                                    userInfos={userInfos}/>
                             </React.Fragment>
                             
                         )
@@ -70,7 +71,7 @@ handleChange=(input)=>e=>{
                                 <Confirm nextStep={this.nextStep}
                                     prevStep={this.prevStep}
                                     handleChange={this.handleChange}
-                                    userInfos={userinfos}/>
+                                    userInfos={userInfos}/>
                             </React.Fragment>
                             
                         )
@@ -80,7 +81,7 @@ handleChange=(input)=>e=>{
                             <React.Fragment>
                                 <Success nextStep={this.nextStep}
                                     handleChange={this.handleChange}
-                                    userInfos={userinfos}/>
+                                    userInfos={userInfos}/>
                             </React.Fragment>
                             
                         )
