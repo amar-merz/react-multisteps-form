@@ -21,15 +21,15 @@ class PersonalDetailsForm extends Component {
                      <TextField hintText="Enter Your City"
                         floatingLabelText="City"
                         onChange={handleChange('city')}
-                        defaultValue={userInfos.lastName}/>
+                        defaultValue={userInfos.city}/>
                     <br/>
                      <TextField hintText="Enter Your Bio"
                         floatingLabelText="Bio"
                         onChange={handleChange('bio')}
-                        defaultValue={userInfos.email}/>
+                        defaultValue={userInfos.bio}/>
                     <br/>
                     <RaisedButton 
-                        label="Back" primary={true}
+                        label="Back" primary={false}
                         style={styles.button} onClick={prevStep}/>
                     <RaisedButton 
                         label="Continue" primary={true}

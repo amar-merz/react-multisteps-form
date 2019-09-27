@@ -70,7 +70,6 @@ handleChange=(input)=>e=>{
                             <React.Fragment>
                                 <Confirm nextStep={this.nextStep}
                                     prevStep={this.prevStep}
-                                    handleChange={this.handleChange}
                                     userInfos={userInfos}/>
                             </React.Fragment>
                             
