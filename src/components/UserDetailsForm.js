@@ -7,7 +7,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 
 class UserDetailsForm extends Component {
     render() {
-        const{userInfos,handleChange}=this.props;
+        const{userInfos,handleChange,errors}=this.props;
         console.log(this.props)
         const {nextStep}=this.props;
         const theme = {
@@ -17,18 +17,19 @@ class UserDetailsForm extends Component {
             <MuiThemeProvider>
                 <React.Fragment>
                     <AppBar title="Enter User Details"/>
-                    <TextField hintText="Enter Your First Name"
+                    <TextField  errorText= {errors.firstName} hintText="Enter Your First Name"
                         floatingLabelText="First Name"
                          
                         onChange={handleChange('firstName')}
                         defaultValue={userInfos.firstName}/>
                     <br/>
-                     <TextField hintText="Enter Your Last Name"
+                     <TextField errorText= {errors.lastName} hintText="Enter Your Last Name"
                         floatingLabelText="Last Name"
                         onChange={handleChange('lastName')}
                         defaultValue={userInfos.lastName}/>
                     <br/>
                      <TextField hintText="Enter Your Email"
+                        errorText= {errors.email}
                         floatingLabelText="Email"
                         onChange={handleChange('email')}
                         defaultValue={userInfos.email}/>
